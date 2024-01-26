@@ -60,7 +60,7 @@
 
 - (void)_pushMemojiSelection
 {
-    AVTAvatarStore *store = [[ASAvatarStore alloc] initWithDomainIdentifier:[NSBundle mainBundle].bundleIdentifier];
+    AVTAvatarStore *store = [[ASAvatarStore alloc] init];
     AVTAvatarLibraryViewController *libraryController = [[ASAvatarLibraryViewController alloc] initWithAvatarStore:store];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_handleMemojiSelectedWithNotification:) name:DidSelectMemoji object:nil];
