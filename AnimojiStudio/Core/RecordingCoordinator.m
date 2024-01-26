@@ -151,7 +151,7 @@
                                                      AVVideoCompressionPropertiesKey: compressionSettings,
                                                      AVVideoCodecKey: AVVideoCodecTypeHEVC,
                                                      AVVideoWidthKey: @(1024),
-                                                     AVVideoHeightKey: @(1024),
+                                                     AVVideoHeightKey: @(2024),
                                                      AVVideoScalingModeKey: AVVideoScalingModeResizeAspectFill
                                                      };
     
