@@ -28,6 +28,8 @@
 @property (nonatomic, strong) UIWindow *settingsContainer;
 @property (nonatomic, weak) RecordingSettingsViewController *settingsController;
 
+//@property (nonatomic, strong) UIView *squareRecordingView;
+
 @end
 
 @implementation RecordingViewController
@@ -61,6 +63,19 @@ NSString * const kMicrophoneEnabled = @"kMicrophoneEnabled";
     self.puppetView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     self.puppetView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.puppetView];
+    
+//    self.squareRecordingView = [UIView new];
+//    self.squareRecordingView.translatesAutoresizingMaskIntoConstraints = NO;
+//    [self.view addSubview:self.squareRecordingView];
+//    [self.squareRecordingView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor].active = YES;
+//    [self.squareRecordingView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor].active = YES;
+//    [self.squareRecordingView.heightAnchor constraintEqualToAnchor:self.view.widthAnchor multiplier:1].active = YES;
+//    [self.squareRecordingView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active = YES;
+//    [self.squareRecordingView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+//    self.squareRecordingView.backgroundColor = UIColor.clearColor;
+//    self.squareRecordingView.layer.borderWidth = 2;
+//    self.squareRecordingView.layer.borderColor = UIColor.redColor.CGColor;
+    
 
     if (self.avatarInstance) [self.puppetView setAvatar:self.avatarInstance];
 

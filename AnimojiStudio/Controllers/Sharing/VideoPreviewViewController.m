@@ -52,10 +52,14 @@
     
     [self.view addSubview:self.videoView];
     
-    [self.videoView.widthAnchor constraintEqualToAnchor:self.view.widthAnchor multiplier:1].active = YES;
-    [self.videoView.heightAnchor constraintEqualToAnchor:self.view.heightAnchor multiplier:1].active = YES;
-    [self.videoView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active = YES;
-    [self.videoView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+    [self.videoView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor].active = YES;
+    [self.videoView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor].active = YES;
+    [self.videoView.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
+    [self.videoView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
+//    [self.videoView.widthAnchor constraintEqualToAnchor:self.view.widthAnchor multiplier:1].active = YES;
+//    [self.videoView.heightAnchor constraintEqualToAnchor:self.view.heightAnchor multiplier:1].active = YES;
+//    [self.videoView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active = YES;
+//    [self.videoView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
     
     self.shareButton = [BigButton new];
     [self.shareButton setTitle:@"Share your creation" forState:UIControlStateNormal];
@@ -87,7 +91,7 @@
     self.player = [AVPlayer playerWithURL:self.videoURL];
     self.videoLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
     
-    self.videoLayer.frame = self.videoView.bounds;
+    self.videoLayer.frame = self.view.bounds;
     [self.videoView.layer addSublayer:self.videoLayer];
     
     [self.player play];
